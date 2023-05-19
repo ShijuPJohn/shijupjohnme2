@@ -53,7 +53,7 @@ body {
   align-items: center;
 }
 .main-body {
-  flex: 20;
+  /*flex: 25;*/
   height: 100vh;
   overflow: scroll;
   display: flex;
