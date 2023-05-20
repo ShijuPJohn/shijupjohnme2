@@ -187,17 +187,22 @@ ul.header__main-nav--links li a:active::after {
 
 .greet_hi {
     font-weight: 400;
-    font-size: 3rem;
+    font-size: calc(2rem + 1vw);
     color: var(--grey-light-text);
     /*letter-spacing: .3rem;*/
 }
 
 .greet_name {
-    font-size: 4rem;
+    font-size: calc(2.5rem + 1vw);
     text-transform: uppercase;
     color: #ff9000;
     letter-spacing: .3rem;
     /*letter-spacing: .5rem;*/
+}
+
+.hero_image_container {
+    display: flex;
+    justify-content: center;
 }
 
 .hero_image {
@@ -206,9 +211,9 @@ ul.header__main-nav--links li a:active::after {
     left: 50%;
     transform: translateX(-110%) translateY(-50%);
     width: 30rem;
-    -webkit-box-shadow: 10px 10px 21px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 21px -9px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 21px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 21px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 21px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 21px -9px rgba(0, 0, 0, 0.75);
     z-index: 10;
 }
 
@@ -216,7 +221,7 @@ ul.header__main-nav--links li a:active::after {
     background-color: var(--primary-color);
     display: flex;
     justify-content: flex-end;
-    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
 
 }
 
@@ -225,15 +230,18 @@ ul.header__main-nav--links li a:active::after {
     padding: 1.2rem 2rem;
     color: #434f49;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
 .hero_banner_title_main {
-    font-size: 3rem;
+    font-size: calc(2.2rem + .6vw);;
 }
 
 .hero_banner_title_main2 {
-    font-size: 1.5rem;
+    font-size: calc(1rem + .4vw);;
     font-weight: 300;
     letter-spacing: .35rem;
 }
@@ -241,7 +249,12 @@ ul.header__main-nav--links li a:active::after {
 /**************************MEDIA*****************************/
 
 @media screen and (max-width: 1200px) {
-    .hero_box{
+    .hero_box {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .hero_box {
         width: 95%;
     }
 }
@@ -249,32 +262,57 @@ ul.header__main-nav--links li a:active::after {
 /**************************MEDIA*****************************/
 
 @media screen and (max-width: 900px) {
-    .hero_box{
+    .hero_box {
         width: 95%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: deeppink;
+        margin: 3rem 1rem 1rem 1rem;
+
+        /*border-style: solid;*/
+        /*border-width: 1px;*/
+        /*border-color: #ababab;*/
+        /*border-radius: 10px;*/
+        padding: .5rem;
     }
-    .hero_image{
-        position: relative;
+
+    .hero_image {
+        position: static;
+        /*top: 0;*/
+        /*left: 0;*/
+        transform: none;
+        box-shadow: none;
+        z-index: 0;
     }
-    .name_greet_outer_box{
+
+    .name_greet_outer_box {
         justify-content: center;
+        width: 70%;
     }
-    .name_greet_inner_box{
+
+    .name_greet_inner_box {
         width: 100%;
+        justify-content: center;
+        align-items: center;
     }
-    .hero_banner{
+
+    .hero_banner {
         clip-path: none;
+        width: 70%;
+    }
+
+    .hero_banner_text_box {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 
 /**************************MEDIA*****************************/
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 630px) {
     aside#side-nav {
         flex: 2;
     }
@@ -372,6 +410,23 @@ ul.header__main-nav--links li a:active::after {
 
     ul.header__main-nav--links li.fade {
         opacity: 1;
+    }
+
+    .hero_box {
+        margin-top: 20rem;
+        width: 100%;
+    }
+
+    .name_greet_outer_box {
+        width: 100%;
+    }
+
+    .hero_banner {
+        width: 100%;
+    }
+
+    .hero_image {
+        width: 90%;
     }
 
     section#about-me {
