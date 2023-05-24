@@ -45,6 +45,7 @@ a:visited {
 
 /********************* Aside Nav **************************/
 aside#side-nav {
+    flex: 1;
     position: sticky;
     top: 0;
     left: 0;
@@ -90,7 +91,7 @@ ul.side-nav__content--social a i:active {
 
 /********************* Main Component **************************/
 main {
-    flex: 1;
+    flex: 20;
 }
 
 /********************* Main Nav Header **************************/
@@ -392,6 +393,7 @@ section#skills {
 
 .skills__item--box {
     margin: 1rem 2rem;
+    width: 25%;
 }
 
 .skills__items--container {
@@ -409,7 +411,7 @@ section#skills {
 
 .skills__item--progress-container {
     height: 3rem;
-    width: 30rem;
+    width: 100%;
     border-radius: 20px;
     border-style: solid;
     border-width: 1px;
@@ -523,6 +525,9 @@ section#skills {
         right: 5%;
         width: 25rem;
     }
+    .skills__item--box{
+        width: 40%;
+    }
 }
 
 /**************************MEDIA*****************************/
@@ -630,6 +635,9 @@ section#skills {
     section#skills {
         width: 93%;
     }
+    .skills__item--box{
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -642,12 +650,10 @@ section#skills {
 
 @media screen and (max-width: 630px) {
     aside#side-nav {
-        /*flex: 2.4;*/
-        padding: 0 2.4rem;
+        flex: 2.4;
     }
+    main{
 
-    main {
-        flex: 1;
     }
 
     header#header {
@@ -767,5 +773,8 @@ section#skills {
 
     section#about-me {
         flex-direction: column;
+    }
+    .skills__item--box{
+        width: 80%;
     }
 }
