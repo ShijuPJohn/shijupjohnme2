@@ -308,7 +308,15 @@ ul.header__main-nav--links li a:active::after {
     font-weight: 300;
     letter-spacing: .35rem;
 }
-
+.section-title{
+    display: inline-block;
+    font-size: calc(1.5rem + 1vw);
+    color: var(--grey-light-text);
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-color: var(--secondary-color);
+    line-height: calc(2.5rem + 1vw);
+}
 /**************************ABOUT*****************************/
 section#about-me {
     width: 90%;
@@ -320,16 +328,6 @@ section#about-me {
     border-color: var(--grey-light-border);
     padding: 3rem;
     position: relative;
-}
-
-.about-me__title {
-    display: inline-block;
-    font-size: 3.5rem;
-    color: var(--grey-light-text);
-    border-bottom-style: solid;
-    border-bottom-width: 4px;
-    border-color: var(--secondary-color);
-    line-height: 3rem;
 }
 
 .about-me__tagline--container {
@@ -378,17 +376,6 @@ section#skills {
     margin: 10rem auto;
     padding: 2rem;
 
-}
-
-.skills__title {
-    display: inline-block;
-    font-size: 3.5rem;
-    color: var(--grey-light-text);
-    border-bottom-style: solid;
-    border-bottom-width: 4px;
-    border-color: var(--secondary-color);
-    line-height: 3rem;
-    margin-bottom: 2rem;
 }
 
 .skills__item--box {
@@ -485,6 +472,44 @@ section#skills {
     width: 60%;
 }
 
+/**************************PROJECTS*****************************/
+section#projects{
+    width: 90%;
+    height: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: var(--grey-light-border);
+    margin: 10rem auto;
+    padding: 2rem;
+}
+.projects__cards--container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 70%;
+    width: 100%;
+}
+.projects__card{
+    width: 30rem;
+    height: 20rem;
+    margin: 1rem 2rem;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #91c4bd;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.projects__card img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: all 1s ease-in-out;
+}
+.projects__card img:hover{
+    transform: scale(1.1);
+    filter: sepia(.3);
+}
 /**************************MEDIA*****************************/
 @media screen and (max-width: 1400px) {
     .about-me__tagline {
@@ -775,6 +800,6 @@ section#skills {
         flex-direction: column;
     }
     .skills__item--box{
-        width: 80%;
+        width: 100%;
     }
 }
