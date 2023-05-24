@@ -90,7 +90,7 @@ ul.side-nav__content--social a i:active {
 
 /********************* Main Component **************************/
 main {
-    flex: 20;
+    flex: 1;
 }
 
 /********************* Main Nav Header **************************/
@@ -642,11 +642,14 @@ section#skills {
 
 @media screen and (max-width: 630px) {
     aside#side-nav {
-        flex: 2.4;
+        /*flex: 2.4;*/
+        padding: 0 2.4rem;
     }
-    main{
-        flex: 20;
+
+    main {
+        flex: 1;
     }
+
     header#header {
         position: absolute;
     }
