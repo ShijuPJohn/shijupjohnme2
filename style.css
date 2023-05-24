@@ -20,7 +20,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-*::selection{
+
+*::selection {
     background-color: var(--secondary-color);
 }
 
@@ -44,7 +45,6 @@ a:visited {
 
 /********************* Aside Nav **************************/
 aside#side-nav {
-    flex: 1;
     position: sticky;
     top: 0;
     left: 0;
@@ -76,7 +76,7 @@ ul.side-nav__content--social {
 }
 
 ul.side-nav__content--social a i {
-    font-size: calc(1rem + .9vw);
+    font-size: calc(1.5rem + .6vw);
     color: white;
     margin: calc(3rem + .6667vw) 0;
     transition: all .7s;
@@ -197,6 +197,7 @@ ul.header__main-nav--links li a:active::after {
         margin-top: 0;
     }
 }
+
 @keyframes progress-indicator {
     0% {
         transform: scaleX(2%);
@@ -388,7 +389,8 @@ section#skills {
     line-height: 3rem;
     margin-bottom: 2rem;
 }
-.skills__item--box{
+
+.skills__item--box {
     margin: 1rem 2rem;
 }
 
@@ -401,8 +403,8 @@ section#skills {
     flex-wrap: wrap;
 }
 
-.skills__items--title {
-
+.skills__item--title {
+    font-size: 1.4rem;
 }
 
 .skills__item--progress-container {
@@ -432,36 +434,52 @@ section#skills {
 .skills__item--progress-bar {
     background-color: var(--primary-color);
     height: 100%;
-
     border-radius: 20px;
-    animation: progress-indicator 3s ease-in-out  infinite;
+    animation: progress-indicator 3s ease-in-out infinite;
     transform-origin: left;
 }
-.html{
+
+.html {
     width: 95%;
+    /*background-color: pink;*/
 }
-.javascript{
+
+.javascript {
     width: 92%;
+    /*background-color: deeppink;*/
 }
-.reactjs{
+
+.reactjs {
     width: 75%;
+    /*background-color: dodgerblue;*/
 }
-.nextjs{
+
+.nextjs {
     width: 80%;
+    /*background-color: brown;*/
 }
-.python{
+
+.python {
     width: 80%;
+    /*background-color: hotpink;*/
 }
-.flask{
+
+.flask {
     width: 85%;
+    /*background-color: darkorange;*/
 }
-.git{
+
+.git {
     width: 65%;
+    /*background-color: indigo;*/
 }
-.java{
+
+.java {
     width: 55%;
+    /*background-color: mediumslateblue;*/
 }
-.postgres{
+
+.postgres {
     width: 60%;
 }
 
@@ -577,7 +595,7 @@ section#skills {
         flex-direction: column;
         align-items: center;
         height: auto;
-        width: 95%;
+        width: 93%;
         padding: 2rem .5rem;
     }
 
@@ -608,6 +626,10 @@ section#skills {
     .about-me__paragraph {
         color: var(--grey-text);
     }
+
+    section#skills {
+        width: 93%;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -620,9 +642,11 @@ section#skills {
 
 @media screen and (max-width: 630px) {
     aside#side-nav {
-        flex: 2;
+        flex: 2.4;
     }
-
+    main{
+        flex: 20;
+    }
     header#header {
         position: absolute;
     }
